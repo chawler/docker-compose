@@ -1,0 +1,11 @@
+ version: '3'
+
+ services:
+   v2ray:
+     image: mritd/v2ray
+     container_name: v2ray
+     restart: always
+     environment:
+       CONFIG: './config.json'
+     ports:
+       - "31841:30001"

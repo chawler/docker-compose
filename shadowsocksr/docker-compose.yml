@@ -1,0 +1,9 @@
+ version: '3'
+ services:
+   shadowsocksr-server:
+     image: smounives/shadowsocksr-docker
+     container_name: shadowsocksr-server
+     restart: always
+     command: -k 19921314
+     ports:
+       - "31840:8388"

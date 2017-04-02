@@ -1,0 +1,11 @@
+ version: '3'
+
+ services:
+   ghost-blog:
+     image: ghost
+     container_name: ghost-blog
+     restart: always
+     volumes:
+       - ./blog:/var/lib/ghost
+     ports:
+       - "127.0.0.1:10000:2368"
