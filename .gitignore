@@ -1,3 +1,5 @@
 assets
 ghost.db
 ghost-dev.db
+
+ghost/blog/images
