@@ -1,0 +1,72 @@
+<div class="pi-sidebar">
+	
+	{{! About Me}}
+    <div class="widget">
+        <h4 class="widget-title">About me</h4>
+        <div class="widget-about-content">
+            <div class="images">
+                <img src="http://wiloke.net/demo/aresivel/images/aboutus.jpg" alt="Image">
+            </div>
+            <h4 class="text-uppercase fs-14">Doris McDonald</h4>
+            <p>Vivamus porta ante eget sem rutrum egestas. Etiam sit amet ex ullamcorper ante mattis sodales. Duis dapibus, quam ac elementum suscipit, felis leo eleifend tortor. <a href="http://grid-aresivel.wilokeghost.com/about-me/">Readmore</a></p>
+        </div>
+    </div>
+    {{! End About Me }}
+
+    {{! Follow Us}}
+    <div class="widget">
+        <h4 class="widget-title">Follow us</h4>
+        <div class="text-italic">
+            <p>Various versions have evolved over the years, sometimes</p>
+        </div>
+        <div class="pi-social-square">
+           {{> social-networks}}
+        </div>
+    </div>
+    {{! End Follow Us}}
+
+    {{! Latest Posts}}
+	<div class="widget postslisting">
+        <h4 class="widget-title">Latest posts</h4>
+        <div class="widget-list latest-posts">
+    	  <div class="sidebox-content loading">
+    	    <div class="loader">
+    	      <i class="fa fa-spinner fa-spin"></i>
+    	    </div>
+    	  </div>
+        </div>
+	</div>
+    {{! End Latest Posts}}
+    
+    {{! Tag Clound}}
+    {{#is "home, index"}}
+    <div class="widget widget_tag_cloud">
+        <h4 class="widget-title widget-title-style-1">Tag cloud</h4>
+        <div class="tagcloud">
+            <ul>
+            {{#foreach posts}}
+                {{#if tags}}
+                {{#foreach tags}}
+                    <li>
+                        <a href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
+                    </li>  
+                {{/foreach}}
+                {{/if}}
+            {{/foreach}}
+            </ul>
+        </div>
+    </div>
+    {{/is}}
+    {{! End Tag}}
+
+    {{! Twitter Feed}}
+    <div class="widget">
+        <h4 class="widget-title widget-title-style-1">Recent Tweet</h4>
+        <div class="widget-tweet-content">
+            <a class="twitter-timeline" href="https://twitter.com/wilokethemes" data-widget-id="438998078058553344">Tweets by @wilokethemes</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+    </div>
+    {{! End Twitter Feed}}
+
+</div>

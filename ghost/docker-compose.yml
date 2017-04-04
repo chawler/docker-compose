@@ -5,7 +5,9 @@
      image: ghost
      container_name: ghost-blog
      restart: always
+     environment:
+       NODE_ENV: 'production'
      volumes:
        - ./blog:/var/lib/ghost
      ports:
-       - "127.0.0.1:10000:2368"
+       - "127.0.0.1:10080:2368"
